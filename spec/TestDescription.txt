@@ -1,0 +1,6 @@
+String tests:
+Changed tests to differnt test cases. Each test is there to test a specific 
+edge cases, such as lower and upper case chars, punctuation, and blank space
+
+Dessert Tests:
+Test edge cases like negative calories

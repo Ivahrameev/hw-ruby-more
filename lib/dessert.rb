@@ -4,7 +4,11 @@ class Dessert
   def initialize(name, calories)
     # your code here
     @name = name
-    @calories = calories
+    if calories > 0
+        @calories = calories 
+    else #my test case, if calories are negative, make positive
+        @calories = -1 * calories
+    end
   end
   def healthy?
     # your code here
