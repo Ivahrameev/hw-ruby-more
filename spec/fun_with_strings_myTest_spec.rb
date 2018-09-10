@@ -3,11 +3,12 @@ require 'byebug'
 
 describe 'palindrome detection' do
   it 'should work for simple strings' do
-    expect('redivider').to  be_a_palindrome
-    expect('abracadabra').not_to  be_a_palindrome
+    expect('abccba').to  be_a_palindrome
+    expect('notapalindorme').not_to  be_a_palindrome
   end
   it 'should be case-insensitive' do
-    expect('ReDivider').to be_a_palindrome
+    expect('AbCcBa').to be_a_palindrome
+    expect('NotAPalinDrome').not_to be_a_palindrome
   end
   it 'should ignore nonword characters' do
     expect('A man, a plan, a canal -- Panama').to be_a_palindrome
@@ -23,7 +24,8 @@ describe 'word count' do
     expect('Doo bee doo bee doo'.count_words).to eq({'doo' => 3, 'bee' => 2})
   end
   it 'ignores punctuation' do
-    expect('A man, a plan, a canal -- Panama!'.count_words).to eq({'man' => 1, 'plan' => 1, 'canal' => 1, 'a' => 3, 'panama' => 1})
+    expect('A man, a plan, a canal -- Panama!'.count_words).to
+        eq({'man' => 1, 'plan' => 1, 'canal' => 1, 'a' => 3, 'panama' => 1})
   end
   it 'works on the empty string' do
     expect(''.count_words).to eq({})
